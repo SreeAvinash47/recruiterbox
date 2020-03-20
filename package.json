@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "client-install":"npm install --prefix client",
+    "install-server":"npm install",
+    "install-client":"cd client && npm install",
+    "install-server-client": "npm run install-server && npm run install-client",
     "start":"node server.js",
     "server":"nodemon server.js",
     "client":"npm start --prefix client",
