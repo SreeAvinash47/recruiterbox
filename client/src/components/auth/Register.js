@@ -51,10 +51,10 @@ class Register extends Component {
     return (
       <div className="register">
         <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Sign Up</h1>
-              <p className="lead text-center">
+          <div className="">
+            <div className="">
+              <h1 className="">Sign Up</h1>
+              <p className="">
                 Create your Sree47 account
               </p>
               <form noValidate onSubmit={this.onSubmit}>
@@ -89,7 +89,7 @@ class Register extends Component {
                   onChange={this.onChange}
                   error={errors.password2}
                 />
-                <input type="submit" value='Register' className="btn btn-info btn-block mt-4" />
+                <input type="submit" value='Register' className="" />
               </form>
             </div>
           </div>

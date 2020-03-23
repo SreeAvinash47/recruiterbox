@@ -18,6 +18,7 @@ import { Provider
 } from 'react-redux';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
+import GiveKudos from './components/layout/GiveKudos';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Dashboard from './components/dashboard/Dashboard';
@@ -53,6 +54,8 @@ function App() {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <PrivateRoute exact path='/dashboard' component={Dashboard} />
+            <PrivateRoute exact path='/givekudos' component={GiveKudos} />
+            {/* <PrivateRoute exact path='/mykudos' component={MyKudos} /> */}
           </Switch>
         </div>
       </div>

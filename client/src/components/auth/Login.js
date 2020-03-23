@@ -50,10 +50,10 @@ class Login extends Component {
     return (
       <div className="login">
         <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Log In</h1>
-              <p className="lead text-center">
+          <div className="">
+            <div className="">
+              <h1 className="">Log In</h1>
+              <p className="">
                 Sign in to your Sree47 account
               </p>
               <form onSubmit={this.onSubmit}>
@@ -74,7 +74,7 @@ class Login extends Component {
                   onChange={this.onChange}
                   error={errors.password}
                 />
-                <input type="submit" value="login" className="btn btn-info btn-block mt-4" />
+                <input type="submit" value="login" className="" />
               </form>
             </div>
           </div>

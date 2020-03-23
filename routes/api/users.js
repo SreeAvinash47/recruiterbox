@@ -12,6 +12,9 @@ const validateLoginInput = require('../../validation/login');
 // Load User model
 const User = require('../../models/User');
 
+// Kudos model
+const Kudo = require('../../models/Kudo');
+
 // @route   GET api/users/test
 // @desc    Tests users route
 // @access  Public
@@ -53,10 +56,21 @@ router.post('/register', (req, res) => {
           newUser.password = hash;
           newUser
             .save()
-            .then(user => res.json(user))
+            .then(user => {
+              const newKudo = new Kudo({
+                user: user.id,
+                kudos_count: 3,
+                name: req.body.name,
+                my_kudos:[],
+                given_kudos:[]
+              });
+              newKudo.save().then(kudo => console.log('Kudos created'))
+                .catch(err=> console.log(err))
+              res.json(user)})
             .catch(err => console.log(err));
         });
       });
+
     }
   });
 });
