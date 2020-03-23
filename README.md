@@ -1,6 +1,4 @@
-# boiler-plate
-Boiler plate for MERN stack
-
+# Recruiter box assignment
 
 Installation instructions:
         * npm run install-server-client
